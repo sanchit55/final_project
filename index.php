@@ -130,3 +130,34 @@ body{
 .login input[type=button]:focus{
 	outline: none;
 }
+::-webkit-input-placeholder{
+        color: rgba(63, 127, 191,0.6);
+}
+::-moz-input-placeholder{
+        color: rgba(63, 127, 191,0.6);
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="body"></div>
+  <div class="grad"></div>
+  		
+  <br>
+  <div class="login">
+	<form class="form-login" method="post" action="./task_list/index.php">
+        <input type="text" placeholder="E-mail" name="email"><br>
+	<input type="password" placeholder="password" name="password"><br>
+	<input type ="hidden" name="action" value="test_user">
+        <input type="submit" value="Login" name="submit">
+	</form>
+	<form class="form-login" method="post" action="register.php">
+	<input type="submit" value="Sign-Up" name="submit">
+	</form>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
