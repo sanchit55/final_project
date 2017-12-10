@@ -74,3 +74,15 @@
         $statement->execute();
         $statement->closeCursor();
         return true;
+
+}
+  function getTask($editid){
+        global $db;
+	$query = 'select * from todo_list where id = :eid';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':eid',$editid);
+	$statement->execute();
+	$result= $statement->fetchAll();
+	$statement->closeCursor();
+	return $result;
+  }
