@@ -86,3 +86,21 @@
 	$statement->closeCursor();
 	return $result;
   }
+
+  function registerUser($fname,$lname,$contact,$email,$username,$password,$birth,$gender){
+   global $db;
+   $query = 'select * from user_info where username = :uname';
+   $statement = $db->prepare($query);
+//   $statement->bindValue(':fname',$fname);
+ //  $statement->bindValue(':lname',$lname);
+  // $statement->bindValue(':cont',$contact);
+ //  $statement->bindValue(':emailid',$email);
+   $statement->bindValue(':uname',$username);
+ //  $statement->bindValue(':pass',$password);
+   $statement->execute();
+   $result = $statement->fetchAll();
+   $statement->closeCursor();
+   $count= $statement->rowCount();
+   if($count > 0){
+   return true;
+   }
