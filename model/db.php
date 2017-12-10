@@ -123,3 +123,14 @@
    }
    
    }
+
+   function isUserValid($username,$password){
+     global $db;
+     $query = 'select * from user_info where email = :name and 
+     password = :pass';
+     $statement = $db->prepare($query);
+     $statement->bindValue(':name',$username);
+     $statement->bindValue(':pass',$password);
+     $statement->execute();
+     $result= $statement->fetchAll();
+     $statement->closeCursor();
