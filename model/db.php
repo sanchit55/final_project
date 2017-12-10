@@ -61,3 +61,16 @@
 	$statement->closeCursor();
 	return $result;
   }
+
+  function editValue($etask,$edescription,$edate,$etime,$eid){
+        global $db;
+	$query = 'update todo_list set todo = :etask, description = :edescription, date = :etime, time = :edate where id = :eid';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':etask',$etask);
+        $statement->bindValue(':eid',$eid);
+	$statement->bindValue(':edescription',$edescription);
+	$statement->bindValue(':edate',$edate);
+	$statement->bindValue(':etime',$etime);
+        $statement->execute();
+        $statement->closeCursor();
+        return true;
