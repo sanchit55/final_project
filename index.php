@@ -27,3 +27,15 @@ body{
 	background-size: cover;
 	-webkit-filter: blur(0px);
 	z-index: 0;
+	}
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); 
+	z-index: 1;
+	opacity: 0.7;
