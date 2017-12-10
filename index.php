@@ -55,3 +55,78 @@ body{
 }
 .header div span{
 	color: #5379fa !important;
+	}
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	background : #3F7FBF;
+	box-shadow: 5px 5px 3px #2A2B2B;
+	z-index : 5;
+	height: 200px;
+	width: 260px;
+        padding: 10px;
+	border-radius: 4px;
+	z-index: 2;
+}
+.login input[type=text]{
+	width: 260px;
+	height: 30px;
+	background: rgba(255, 255, 255,0.6);
+	border: 1px solid rgba(63, 127, 191,0.6);
+	border-radius: 2px;
+        color: #3F7FBF;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+.login input[type=password]{
+	width: 260px;
+	height: 30px;
+	background: rgba(255, 255, 255,0.6);
+	border: 1px solid rgba(63, 127, 191,0.6);
+	border-radius: 2px;
+	color: #3F7FBF;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #2a2b2b;
+	border: 1px solid #2a2b2b;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+	padding: 6px;
+        margin-top: 10px;
+}
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(63, 127, 191,0.9);
+}
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(63, 127, 191,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
