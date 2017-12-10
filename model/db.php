@@ -15,3 +15,13 @@
 	$statement->closeCursor();
 	return true;
    }
+
+   function updateStatus($status,$id){
+        global $db;
+	$query = 'update todo_list set status = :status where id = :id';
+	$statement = $db->prepare($query);
+	$statement->bindValue(':status',$status);
+	$statement->bindValue(':id',$id);
+	$statement->execute();
+	$statement->closeCursor();
+	return true;
