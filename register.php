@@ -94,3 +94,17 @@ body{
 	padding: 4px;
 	margin-top: 10px;
 }
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(63, 127, 191,0.6);
+	border-radius: 2px;
+	color: #3F7FBF;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
