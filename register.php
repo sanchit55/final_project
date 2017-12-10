@@ -124,3 +124,33 @@ body{
 	padding: 6px;
 	margin-top: 10px;
 }
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(63, 127, 191,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(63, 127, 191,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(63, 127, 191,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(63, 127, 191,0.6);
+}
