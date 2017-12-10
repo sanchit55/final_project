@@ -134,3 +134,30 @@
      $statement->execute();
      $result= $statement->fetchAll();
      $statement->closeCursor();
+
+     
+     $count = $statement->rowCount();
+     if($count == 1){
+       $id = $result[0]['id'];
+       $_SESSION['id'] = $id;
+       $fname = $result[0]['first_name'];
+       $_SESSION['first_name'] = $fname;
+       $lname = $result[0]['last_name'];
+       $_SESSION['last_name'] = $lname;
+       setcookie('login',$username);
+       setcookie('my_id',$result[0]['id']);
+       //setcookie('my_name',$result[0]['first_name']);
+       //setcookie('my_lname',$result[0]['last_name']);
+       setcookie('islogged',true);
+       return true;
+     }else{
+       unset($_COOKIE['login']);
+       setcookie('login',false);
+       setcookie('islogged',false);
+       setcookie('id',false);
+       return false;
+     }
+
+   }
+
+?>
