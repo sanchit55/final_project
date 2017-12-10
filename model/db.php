@@ -25,3 +25,14 @@
 	$statement->execute();
 	$statement->closeCursor();
 	return true;
+
+	}
+
+   function deleteTask($taskid){
+     global $db;
+     $query = 'delete from todo_list where id = :task';
+     $statement = $db->prepare($query);
+     $statement->bindValue(':task',$taskid);
+     $statement->execute();
+     $statement->closeCursor();
+     return true;
