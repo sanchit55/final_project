@@ -108,3 +108,19 @@ body{
 	padding: 4px;
 	margin-top: 10px;
 }
+
+
+.login input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #3498DB;
+	border: 1px solid #3498DB;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
