@@ -36,3 +36,15 @@
      $statement->execute();
      $statement->closeCursor();
      return true;
+
+     }
+   function getTodoItems($id){
+     global $db;
+     $query = 'select * from todo_list where user_id= :userid and status = :status';
+     $statement = $db->prepare($query);
+     $statement->bindValue(':userid',$id);
+     $statement->bindValue(':status','incomplete');
+     $statement->execute();
+     $result= $statement->fetchAll();
+     $statement->closeCursor();
+     return $result;
