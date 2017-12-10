@@ -66,3 +66,31 @@ body{
 .header div span{
 	color: #5379fa !important;
 }
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	background : #fff;
+	box-shadow: 5px 5px 3px #2A2B2B;
+	z-index : 5;
+	height: 350px;
+	width: 260px;
+	padding: 10px;
+	border-radius: 4px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(63, 127, 191,0.6);
+	border-radius: 2px;
+	color: #3F7FBF;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
