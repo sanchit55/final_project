@@ -27,3 +27,17 @@ font-family: cursive;
 input[type=submit]:hover {
 background-color: #729edc;
 }
+h1 {
+font-family: cursive;
+color: #fff;
+text-align: center;
+}
+.welcome{
+background:#4c75af;
+}
+p {
+margin-right: 5px;
+font-family: cursive;
+color: #fff;
+text-align: right;
+}
