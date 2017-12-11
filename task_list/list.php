@@ -27,3 +27,36 @@ font-weight: 400;
 padding: 4px;
 margin-top: 10px;
 }
+
+input[type=submit] {
+    width: 120px;
+    height: 30px;
+    background-color: #4c75af;
+    color: white;
+    padding: 0px 15px;
+    margin: -15px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #729edc;
+    }
+.welcome{
+background:#4c75af;
+}
+h1 {
+font-family: cursive;
+color: #fff;
+text-align: center;
+}
+h3 {
+font-family: cursive;
+text-align: center;
+}
+p {
+margin-right: 5px;
+font-family: cursive;
+color: #fff;
+text-align: right;
+}
