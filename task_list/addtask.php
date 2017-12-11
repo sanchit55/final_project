@@ -91,3 +91,17 @@ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0
 z-index: 1;
 opacity: 0.7;
 }
+.login{
+position: absolute;
+top: calc(20% - 5px);
+left: calc(45% - 50px);
+background : #fff;
+box-shadow: 5px 5px 3px #2A2B2B;
+z-index : 5;
+color: #4c75af;
+height: 400px;
+width: 300px;
+padding: 10px;
+border-radius: 4px;
+z-index: 2;
+}
