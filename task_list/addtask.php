@@ -79,3 +79,15 @@ font-weight: 400;
 padding: 4px;
 margin-top: 10px;
 }
+.grad{
+position: absolute;
+top: 135px;
+left: 700px;
+right: 400px;
+bottom: 500px;
+width: 500px;
+height: 300px;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.29)), color-stop(100%,rgba(0,0,0,0.65)));
+z-index: 1;
+opacity: 0.7;
+}
