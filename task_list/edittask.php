@@ -70,3 +70,57 @@ padding: 10px;
 border-radius: 4px;
 z-index: 2;
 }
+input[type=submit] {
+width: 120px;
+height: 30px;
+background-color: #4c75af;
+color: white;
+padding: 0px 15px;
+margin: -15px 70px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-family: cursive;
+}
+input[type=submit]:hover {
+background-color: #729edc;
+}
+input[type=text]{
+width: 260px;
+height: 30px;
+background: rgba(255, 255, 255,0.6);
+border: 1px solid rgba(63, 127, 191,0.6);
+border-radius: 4px;
+color: #3F7FBF;
+font-family: 'Exo', sans-serif;
+font-size: 16px;
+font-weight: 400;
+padding: 4px;
+margin-top: 10px;
+}
+input[type=date]{
+width: 260px;
+height: 30px;
+background: rgba(255, 255, 255,0.6);
+border: 1px solid rgba(63, 127, 191,0.6);
+border-radius: 4px;
+color: #3F7FBF;
+font-family: 'Exo', sans-serif;
+font-size: 16px;
+font-weight: 400;
+padding: 4px;
+margin-top: 10px;
+}
+input[type=time]{
+width: 260px;
+height: 30px;
+background: rgba(255, 255, 255,0.6);
+border: 1px solid rgba(63, 127, 191,0.6);
+border-radius: 4px;
+color: #3F7FBF;
+font-family: 'Exo', sans-serif;
+font-size: 16px;
+font-weight: 400;
+padding: 4px;
+margin-top: 10px;
+}
