@@ -123,3 +123,17 @@ else if ($action == 'etask'){
      }
 
 }
+else if ($action == 'statusupdate'){
+      $id = filter_input(INPUT_POST, 'user_id');
+      $status = "complete";
+      $statusupdate = updateStatus($status,$id);
+      if($statusupdate == true){
+         $id = $_SESSION['id'];
+   $result = getTodoItems($id);
+   $result2 = completedItems($id);
+
+   include('list.php');
+     }
+
+     }
+?>
