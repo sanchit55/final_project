@@ -42,3 +42,45 @@ if($action == "show_login_page")
        $exit = registerUser($fname,$lname,$contact,$email,$username,$password,$birth,$gender);
        if($exit == true)
        {
+       // echo "already exist";
+        header("Location: ../error/userexist.php");
+   }else{
+       header("Location: ../index.php");
+
+   }
+  }
+else if ($action == 'add')
+{
+      $user_id = filter_input(INPUT_POST, 'userid',FILTER_VALIDATE_INT);
+      $description = filter_input(INPUT_POST, 'description');
+     // echo $user_id;
+     // echo $description;
+      $add = addTodoItem($user_id,$description);
+      if ($add == true){
+      $id = $_SESSION['id'];
+      $result = getTodoItems($id);
+      $result2 = completedItems($id);
+
+      include('list.php');
+      }
+
+}
+
+else if ($action == 'addtask')
+{
+ $user_id = filter_input(INPUT_POST, 'userid',FILTER_VALIDATE_INT);
+ $task = filter_input(INPUT_POST, 'task');
+ $description = filter_input(INPUT_POST, 'description');
+ $date = filter_input(INPUT_POST, 'datetodo');
+ $time = filter_input(INPUT_POST, 'timetodo');
+ $status = "incomplete";
+ $addtask = addTodoItems($user_id,$description,$task,$date,$time,$status);
+      if($addtask == true){
+      $id = $_SESSION['id'];
+         $result = getTodoItems($id);
+   $result2 = completedItems($id);
+      include('list.php');
+      
+      }
+
+}
