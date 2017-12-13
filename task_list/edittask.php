@@ -135,10 +135,10 @@ margin-top: 10px;
 
 <div class="login">
 <h3>Old Values</h3>
-<strong>Task: </strong><input type="text" name="" value=" <?php echo $res3['todo']; ?>"><br>
+<strong>Task: </strong><input type="text" name="" value=" <?php echo $res3['todo_title']; ?>"><br>
 <strong>Description: </strong><input type="text" name="" value=" <?php echo $res3['description']; ?>"><br>
-<strong>Date: </strong><input type="text" name="" value=" <?php echo $res3['date']; ?>"><br>
-<strong>Time: </strong><input type="text" name="" value=" <?php echo $res3['time']; ?>"><br>
+<strong>Date: </strong><input type="text" name="" value=" <?php echo $res3['date_created']; ?>"><br>
+<strong>Time: </strong><input type="text" name="" value=" <?php echo $res3['date']; ?>"><br>
 </div>
 <br>
 <div class="login1">
@@ -149,7 +149,7 @@ margin-top: 10px;
  <strong>Description: </strong><input type="text" name="edescription"><br>
  <strong>Date: </strong><input type="date" name="date" ><br>
  <strong>Time: </strong><input type="time" name="time" ><br><br><br>
- <input type="hidden" name="user_id" value="<?php echo $res3['id']; ?>">
+ <input type="hidden" name="user_id" value="<?php echo $res3['user_id']; ?>">
  <input type="submit" value="Edit">
  <input type="hidden" name='action' value="etask">
  </form>
