@@ -3,7 +3,7 @@
 
    function addTodoItems($user_id,$description,$task,$date,$time,$status){
         global $db;
-	$query = 'insert into todo_list(todo, user_id, status, description, date, time) values (:task, :userid, :status, :todo_text, :date, :time)';
+	$query = 'insert into todo_list(todo_title, user_id, status, description, date_created, date) values (:task, :userid, :status, :todo_text, :date, :time)';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':userid',$user_id);
 	$statement->bindValue(':todo_text',$description);
@@ -105,9 +105,8 @@
    return true;
    }
    else{
-   $query = 'insert into user_info(first_name,last_name,contact_no,email,username,password,birth,gender)
-             values
-	     (:fname,:lname,:cont,:emailid,:uname,:pass,:birth,:gender)';
+   $query = 'insert into user_info (first_name,last_name,contact_no,email,username,password,birth,gender)
+             values	(:fname,:lname,:cont,:emailid,:uname,:pass,:birth,:gender)';
    $statement = $db->prepare($query);
    $statement->bindValue(':fname',$fname);
    $statement->bindValue(':lname',$lname);
