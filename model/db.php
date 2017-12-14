@@ -55,7 +55,7 @@
 	$query = 'select * from todo_list where user_id= :userid and status = :status';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':userid',$user_id);
-	$statement->bindValue(':status','complete');
+	$statement->bindValue(':status','1');
 	$statement->execute();
 	$result= $statement->fetchAll();
 	$statement->closeCursor();
@@ -158,5 +158,7 @@
      }
 
    }
+
+   
 
 ?>
