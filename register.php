@@ -69,12 +69,12 @@ body{
 
 .login{
 	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
+	top: 24%;
+	left: 48%;
 	background : #fff;
 	box-shadow: 5px 5px 3px #2A2B2B;
 	z-index : 5;
-	height: 350px;
+	height: 450px;
 	width: 260px;
 	padding: 10px;
 	border-radius: 4px;
