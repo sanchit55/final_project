@@ -99,7 +99,7 @@ else if ($action == 'deletetask'){
     // echo $taskid;
      $task = deleteTask($taskid);
      if($task == true){
-     $id = $_SESSION['id'];
+     $id = $_SESSION['user_id'];
         $result = getTodoItems($id);
   $result2 = completedItems($id);
      
@@ -107,7 +107,7 @@ else if ($action == 'deletetask'){
      }
      }
 else if ($action == 'etask'){
-     $etask = filter_input(INPUT_POST, 'edtask');
+     $etask = filter_input(INPUT_POST, 'etask');
      $edescription = filter_input(INPUT_POST, 'edescription');
      $edate = filter_input(INPUT_POST, 'date');
      $etime = filter_input(INPUT_POST, 'time');
@@ -145,8 +145,10 @@ else if ($action == 'statusupdate'){
 
 <body>
   <form class="form-login" method="post" action="view.php">
+ 
   <input type="submit" value="view" name="Display">
+  
   </form>
-
+ <a href="https://web.njit.edu/~sg948/finalProject/task_list/Logout.php">click here to log out</a>
 </body>
 </html>
