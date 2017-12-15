@@ -18,7 +18,7 @@
 
    function updateStatus($status,$id){
         global $db;
-	$query = 'update todo_list set status = :status where id = :id';
+	$query = 'update todo_list set status = :status where user_id = :id';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':status',$status);
 	$statement->bindValue(':id',$id);
@@ -30,7 +30,7 @@
 
    function deleteTask($taskid){
      global $db;
-     $query = 'delete from todo_list where id = :task';
+     $query = 'delete from todo_list where user_id = :task';
      $statement = $db->prepare($query);
      $statement->bindValue(':task',$taskid);
      $statement->execute();
@@ -43,7 +43,7 @@
      $query = 'select * from todo_list where user_id= :userid and status = :status';
      $statement = $db->prepare($query);
      $statement->bindValue(':userid',$id);
-     $statement->bindValue(':status','incomplete');
+     $statement->bindValue(':status','0');
      $statement->execute();
      $result= $statement->fetchAll();
      $statement->closeCursor();
@@ -64,7 +64,7 @@
 
   function editValue($etask,$edescription,$edate,$etime,$eid){
         global $db;
-	$query = 'update todo_list set todo = :etask, description = :edescription, date = :etime, time = :edate where id = :eid';
+	$query = 'update todo_list set todo_title = :etask, description = :edescription, date_created = :etime, date = :edate where user_id = :eid';
         $statement = $db->prepare($query);
         $statement->bindValue(':etask',$etask);
         $statement->bindValue(':eid',$eid);
@@ -78,7 +78,7 @@
 }
   function getTask($editid){
         global $db;
-	$query = 'select * from todo_list where id = :eid';
+	$query = 'select * from todo_list where user_id = :eid';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':eid',$editid);
 	$statement->execute();
@@ -89,6 +89,8 @@
 
   function registerUser($fname,$lname,$contact,$email,$username,$password,$birth,$gender){
    global $db;
+
+   
    $query = 'select * from user_info where username = :uname';
    $statement = $db->prepare($query);
 //   $statement->bindValue(':fname',$fname);
@@ -162,6 +164,7 @@
      }
 
    }
+
    
 
 ?>
