@@ -102,6 +102,10 @@
    $statement->closeCursor();
    $count= $statement->rowCount();
    if($count > 0){
+
+  if (strlen($_POST["password"]) <= '6') {
+        $pwdvad = "Your Password Must Contain At Least 6 Characters!";
+    }
    return true;
    }
    else{
@@ -158,7 +162,6 @@
      }
 
    }
-
    
 
 ?>
