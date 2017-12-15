@@ -30,7 +30,7 @@ if($action == "show_login_page")
   }
 }else if ($action == 'register')
 {
-// echo " we want to create a new account";
+
        $fname = filter_input(INPUT_POST, 'firstname');
        $lname = filter_input(INPUT_POST, 'lastname');
        $contact = filter_input(INPUT_POST, 'contact');
@@ -42,7 +42,7 @@ if($action == "show_login_page")
        $exit = registerUser($fname,$lname,$contact,$email,$username,$password,$birth,$gender);
        if($exit == true)
        {
-       // echo "already exist";
+       
         header("Location: ../error/userexist.php");
    }else{
        header("Location: ../index.php");
@@ -137,3 +137,16 @@ else if ($action == 'statusupdate'){
 
      }
 ?>
+
+<html >
+<head>
+
+  </head>
+
+<body>
+  <form class="form-login" method="post" action="view.php">
+  <input type="submit" value="view" name="Display">
+  </form>
+
+</body>
+</html>
