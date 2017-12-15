@@ -1,6 +1,6 @@
 CTYPE html>
 <html >
-<head>i
+<head>
 <meta charset="UTF-8">
   <title>TO DO LIST</title>
   <style>
@@ -10,9 +10,9 @@ CTYPE html>
 body{
 	margin: 0;
 	padding: 0;
-	background: #fff;
-        color: #fff;
-	font-family: Arial;
+	background: ##FFFFFF;
+        color: ##FFFFFF;
+	font-family: Calibri;
 	font-size: 12px;
 }
 .body{
@@ -23,7 +23,7 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url(https://static1.squarespace.com/static/5565e32ce4b0dcba1f63442d/t/5660edbbe4b0690830f82514/1449192907245/paper-iphone-to-do-list);
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/78/Coffee-apple-iphone-laptop-1_%2823699840693%29.jpg);
 	background-size: cover;
 	-webkit-filter: blur(0px);
 	z-index: 0;
@@ -58,9 +58,9 @@ body{
 	}
 .login{
 	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
-	background : #3F7FBF;
+	top: 30%;
+	left: 50%;
+	background : ##FFFFFF;
 	box-shadow: 5px 5px 3px #2A2B2B;
 	z-index : 5;
 	height: 200px;
@@ -72,7 +72,7 @@ body{
 .login input[type=text]{
 	width: 260px;
 	height: 30px;
-	background: rgba(255, 255, 255,0.6);
+	background: rgba(255, 255, 255,0.8);
 	border: 1px solid rgba(63, 127, 191,0.6);
 	border-radius: 2px;
         color: #3F7FBF;
@@ -85,10 +85,10 @@ body{
 .login input[type=password]{
 	width: 260px;
 	height: 30px;
-	background: rgba(255, 255, 255,0.6);
+	background: rgba(255, 255, 255,0.8);
 	border: 1px solid rgba(63, 127, 191,0.6);
 	border-radius: 2px;
-	color: #3F7FBF;
+	color: ##FFFFFF;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -97,7 +97,7 @@ body{
 }
 
 .login input[type=submit]{
-	width: 260px;
+	width: 300px;
 	height: 35px;
 	background: #2a2b2b;
 	border: 1px solid #2a2b2b;
@@ -120,11 +120,11 @@ body{
 
 .login input[type=text]:focus{
 	outline: none;
-	border: 1px solid rgba(63, 127, 191,0.9);
+	border: 1px solid rgba(255, 255, 255,0.8);
 }
 .login input[type=password]:focus{
 	outline: none;
-	border: 1px solid rgba(63, 127, 191,0.9);
+	border: 1px solid rgba(255, 255, 255,0.8);
 }
 
 .login input[type=button]:focus{
@@ -148,16 +148,18 @@ body{
   		
   <br>
   <div class="login">
-	<form class="form-login" method="post" action="./task_list/index.php">
+	<form class="form-login" method="post" action="https://web.njit.edu/~sg948/finalProject/task_list/index.php">
         <input type="text" placeholder="E-mail" name="email"><br>
 	<input type="password" placeholder="password" name="password"><br>
 	<input type ="hidden" name="action" value="test_user">
         <input type="submit" value="Login" name="submit">
-	</form>
+    </form>
+	
+
 	<form class="form-login" method="post" action="register.php">
 	<input type="submit" value="Sign-Up" name="submit">
 	</form>
 </div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </body>
 </html>
