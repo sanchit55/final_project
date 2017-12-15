@@ -29,7 +29,7 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url(https://static1.squarespace.com/static/5565e32ce4b0dcba1f63442d/t/5660edbbe4b0690830f82514/1449192907245/paper-iphone-to-do-list);
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/78/Coffee-apple-iphone-laptop-1_%2823699840693%29.jpg);
 	background-size: cover;
 	-webkit-filter: blur(0px);
 	z-index: 0;
@@ -57,7 +57,7 @@ body{
 
 .header div{
 	float: left;
-	color: #fff;
+	color: #FFFFFF;
 	font-family: 'Exo', sans-serif;
 	font-size: 35px;
 	font-weight: 200;
@@ -71,7 +71,7 @@ body{
 	position: absolute;
 	top: 24%;
 	left: 48%;
-	background : #fff;
+	background : #FFFFFF;
 	box-shadow: 5px 5px 3px #2A2B2B;
 	z-index : 5;
 	height: 450px;
@@ -135,12 +135,12 @@ body{
 
 .login input[type=text]:focus{
 	outline: none;
-	border: 1px solid rgba(63, 127, 191,0.9);
+	border: 1px solid rgba(128,128,128);
 }
 
 .login input[type=password]:focus{
 	outline: none;
-	border: 1px solid rgba(63, 127, 191,0.9);
+	border: 1px solid rgba(128,128,128,0.6);
 }
 
 .login input[type=button]:focus{
@@ -167,14 +167,14 @@ body{
 		<br>
 		<div class="login">
 		<form class="form-login" method="post" action="https://web.njit.edu/~sg948/finalProject/task_list/index.php">
-		        <input type="text" placeholder="First Name" name="firstname"><br>
-				<input type="text" placeholder="Last Name" name="lastname"><br>
+		        <input type="text" placeholder="First Name" name="firstname" required><br>
+				<input type="text" placeholder="Last Name" name="lastname" required><br>
 				<input type="text" placeholder="Contact No" name="contact"><br>
-				<input type="text" placeholder="E-mail" name="mailid"><br>
+				<input type="text" placeholder="E-mail" name="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter the valid emailid"><br>
 				<input type="text" placeholder="username" name="user"><br>
 				<input type="text" placeholder="gender" name="gender"><br>
 				<input type="text" placeholder="birth" name="birth"><br>
-				<input type="password" placeholder="password" name="password"><br>
+				<input type="password" placeholder="password" name="password" minlength="6"> <br>
 				<input type ="hidden" name="action" value="register">
 				<input type="submit" value="Sign-Up">
 
