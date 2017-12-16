@@ -8,3 +8,4 @@ echo "<h1> User Name Already Exist</h1><br/>";
 </form>
 </body>
 </html>
+
