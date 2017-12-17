@@ -2,19 +2,15 @@
 
 class accounts extends \database\collection
 {
-    protected static $modelName = 'account';
-
-    //This is the function to write to find user by ID for login.
-    //Don't forget to return the object see findOne in the collection class
+    protected static $modelName = 'account'; // linking of the file  with the database
 
 
     public static function findUserbyEmail($email)
     {
 
             $tableName = get_called_class();
-            $sql = 'SELECT * FROM ' . $tableName . ' WHERE email = ?';
+            $sql = 'SELECT * FROM ' . $tableName . ' WHERE email = ?';// providing SQL statment in order to call from the id
 
-         //grab the only record for find one and return as an object
             $recordsSet = self::getResults($sql, $email);
 
             if (is_null($recordsSet)) {
@@ -24,14 +20,12 @@ class accounts extends \database\collection
             }
     }
 	
-	//By IPE TEAM
 	public static function findUserbyId($id)
     {
 
             $tableName = get_called_class();
-            $sql = 'SELECT * FROM ' . $tableName . ' WHERE id = ?';
+            $sql = 'SELECT * FROM ' . $tableName . ' WHERE id = ?';// returning result on the basis of the id
 
-         //grab the only record for find one and return as an object
             $recordsSet = self::getResults($sql, $id);
 
             if (is_null($recordsSet)) {
