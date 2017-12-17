@@ -8,9 +8,9 @@ define('CONNECTION', '');*/
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-define('DATABASE', 'sjp77');
-define('USERNAME', 'sjp77');
-define('PASSWORD', 'hS1DY7pYO');
+define('DATABASE', 'sg948');
+define('USERNAME', 'sg948');
+define('PASSWORD', 'HfwrZHvX');
 define('CONNECTION', 'sql1.njit.edu');
 class dbConn
 {
