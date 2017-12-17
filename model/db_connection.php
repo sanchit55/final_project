@@ -1,5 +1,7 @@
 <?php
-
+ //database configuration
+ ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 //constants
 define('DATABASE','sg948');
 define('USERNAME','sg948');
