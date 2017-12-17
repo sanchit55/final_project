@@ -33,4 +33,18 @@ class dbConn
               echo "Connection Error: " . $e->getMessage();
              }
         }
+    // get connection function. Static method - accessible without instantiation
     
+      public static function getConnection() 
+        {
+           //Guarantees single instance, if no connection object exists then create one.
+            if (!self::$db) 
+            {
+                //new connection object.
+                 new dbConn();
+            }
+        
+          //return connection.
+          return self::$db;
+        }
+}
