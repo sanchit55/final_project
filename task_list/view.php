@@ -13,7 +13,7 @@ if (!$conn) {
 $sql = 'SELECT * FROM user_info';
     
 $query = mysqli_query($conn, $sql);
-
+print_r($query);
 if (!$query) {
   die ('SQL Error: ' . mysqli_error($conn));
 }

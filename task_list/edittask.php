@@ -1,8 +1,8 @@
 <?php
 foreach ($result3 as $res3):
-
 endforeach;
 ?>
+
 <html>
 <style>
 body{
@@ -135,22 +135,25 @@ margin-top: 10px;
 
 <div class="login">
 <h3>Old Values</h3>
-<strong>Task: </strong><input type="text" name="" value=" <?php echo $res3['todo_title']; ?>"><br>
+
+<strong>Task: </strong><input type="text" name="" value=" <?php echo $res3["todo_title"]; ?>"><br>
 <strong>Description: </strong><input type="text" name="" value=" <?php echo $res3['description']; ?>"><br>
 <strong>Date: </strong><input type="text" name="" value=" <?php echo $res3['date_created']; ?>"><br>
 <strong>Time: </strong><input type="text" name="" value=" <?php echo $res3['date']; ?>"><br>
+<strong>User: </strong><input type="text" name="" value=" <?php echo $res3['user_id']; ?>"><br>
 </div>
 <br>
+
 <div class="login1">
  <h3>Enter New Values</h3>
 
 <form style="margin-top: 15px;" action="index.php" method="post">
- <strong>Task: </strong><input type="text" name="etask"><br>
+ <strong>Task: </strong><input type="text" name="edtask"><br>
  <strong>Description: </strong><input type="text" name="edescription"><br>
- <strong>Date: </strong><input type="date" name="edate" ><br>
- <strong>Time: </strong><input type="time" name="etime" ><br><br><br>
- <input type="hidden" name="user_id" value="<?php echo $res3['user_id']; ?>">
- <input type="submit" value="Edit">
+ <strong>Date: </strong><input type="date" name="date" ><br>
+ <strong>Time: </strong><input type="time" name="time" ><br><br><br>
+ <input type="hidden" name="user_id" value=" <?php echo $res3['user_id']; ?>">
+  <input type="submit" value="Edit">
  <input type="hidden" name='action' value="etask">
  </form>
  </div>
@@ -158,3 +161,4 @@ margin-top: 10px;
 
 </body>
 </html>
+

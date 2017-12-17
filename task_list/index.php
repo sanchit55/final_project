@@ -1,9 +1,11 @@
 <?php
 //$id = $_SESSION['userid'];
 //echo $id;
-require('../model/db_connection.php');
-require('../model/db.php');
+require_once('../model/db_connection.php');
+require_once('../model/db.php');
 $action = filter_input(INPUT_POST, "action");
+//echo $action;
+//echo "func";
 if($action == NULL)
 {
   $action = "show_login_page";
@@ -13,24 +15,27 @@ if($action == "show_login_page")
   include('./index.php');
 }else if($action == 'test_user')
 {
+  //echo "san";
   $username = $_POST['email'];
   $password = $_POST['password'];
+  //echo "user validation";
   $suc = isUserValid($username,$password);
   if($suc == true)
   {
    $id = $_SESSION['id'];
    $result = getTodoItems($id);
+   //echo "test";
    $result2 = completedItems($id);
     include('list.php');
    
     
    
   }else{
-    header("Location: ../error/badinfo.php");
+    header("Location: ../error/bad_info.php");
   }
 }else if ($action == 'register')
 {
-
+// echo " we want to create a new account";
        $fname = filter_input(INPUT_POST, 'firstname');
        $lname = filter_input(INPUT_POST, 'lastname');
        $contact = filter_input(INPUT_POST, 'contact');
@@ -42,7 +47,7 @@ if($action == "show_login_page")
        $exit = registerUser($fname,$lname,$contact,$email,$username,$password,$birth,$gender);
        if($exit == true)
        {
-       
+       // echo "already exist";
         header("Location: ../error/userexist.php");
    }else{
        header("Location: ../index.php");
@@ -87,8 +92,10 @@ else if ($action == 'addtask')
 
 else if($action == 'edittask'){
      $editid = filter_input(INPUT_POST, 'user_id');
-  // echo $editid;
+   //echo "edit task";
+   //echo $editid;
      $result3 = getTask($editid);
+     //var_dump($result3);
      include('edittask.php');
 
    //  header("Location: edittask.php")
@@ -99,7 +106,7 @@ else if ($action == 'deletetask'){
     // echo $taskid;
      $task = deleteTask($taskid);
      if($task == true){
-     $id = $_SESSION['user_id'];
+     $id = $_SESSION['id'];
         $result = getTodoItems($id);
   $result2 = completedItems($id);
      
@@ -107,13 +114,18 @@ else if ($action == 'deletetask'){
      }
      }
 else if ($action == 'etask'){
-     $etask = filter_input(INPUT_POST, 'etask');
+   //echo "toner";
+     $etask = filter_input(INPUT_POST, 'edtask');
      $edescription = filter_input(INPUT_POST, 'edescription');
      $edate = filter_input(INPUT_POST, 'date');
      $etime = filter_input(INPUT_POST, 'time');
      $eid = filter_input(INPUT_POST, 'user_id');
-    // echo $eid;
+    //echo $etask;
+    //echo $edescription;
+    //echo $eid;
+    //echo "checking";
      $editvalue = editValue($etask,$edescription,$etime,$edate,$eid);
+     //echo $editvalue;
      if($editvalue == true){
      $id = $_SESSION['id'];
      $result = getTodoItems($id);
@@ -137,18 +149,3 @@ else if ($action == 'statusupdate'){
 
      }
 ?>
-
-<html >
-<head>
-
-  </head>
-
-<body>
-  <form class="form-login" method="post" action="view.php">
- 
-  <input type="submit" value="view" name="Display">
-  
-  </form>
- <a href="https://web.njit.edu/~sg948/finalProject/task_list/Logout.php">click here to log out</a>
-</body>
-</html>
