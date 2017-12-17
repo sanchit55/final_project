@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Todo Task Management</title>
+    <title>Task Management</title>
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
@@ -16,7 +16,6 @@
 <body>
 <h1>
 <?php
-//this how to print some data;
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
@@ -38,7 +37,6 @@ $user_data = accounts::findUserbyId($userID);
 </ul>
 
 <?php
-//this is how you print something
 print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
