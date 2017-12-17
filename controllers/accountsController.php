@@ -88,7 +88,7 @@ class accountsController extends http\controller
 
         $record = accounts::findOne($_REQUEST['id']);
         $record->delete();
-        header("Location: index.php?page=accounts&action=all"); // to delete a task
+        header("Location: index.php?page=accounts&action=all"); // to delete 
     }
 
     public static function login()
