@@ -26,13 +26,13 @@ class tasksController extends http\controller
 
     }
 
-    public static function create()
+    public static function create() // function to call the task creation
     {
 		$record = '';
          self::getTemplate('create_task', $record);
     }
 
-    public static function edit()
+    public static function edit()// to edit the task function
     {
         $record = todos::findOne($_REQUEST['id']);
         self::getTemplate('edit_task', $record);
@@ -52,7 +52,7 @@ class tasksController extends http\controller
         header("Location: index.php?page=tasks&action=edit&id=".$_REQUEST['id']);
     }
 
-    public static function save() {
+    public static function save() {// to save the data
 		$date = date('Y-m-d');
         $task = new todo();
 		$task->title = $_REQUEST['title'];
@@ -64,7 +64,7 @@ class tasksController extends http\controller
 		header("Location: index.php?page=tasks&action=all");
     }
 
-    public static function delete()
+    public static function delete() // to delete the task
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();

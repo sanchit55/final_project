@@ -1,7 +1,7 @@
 <?php
 
 
-class homepageController extends http\controller
+class homepageController extends http\controller // extending the http folder file in core
 {
 
     public static function show()
@@ -15,7 +15,7 @@ class homepageController extends http\controller
       header("Location: index.php?page=accounts&action=all");
     }
 
-        self::getTemplate('homepage', $templateData);
+        self::getTemplate('homepage', $templateData);// input of the table of the user
     }
 
     public static function create()
