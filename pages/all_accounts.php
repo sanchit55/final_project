@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Task Management</title>
+    <title>Your Profile</title>
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
@@ -14,31 +14,29 @@
 </head>
 
 <body>
-<h1>
-<?php
-$config = Manage::config();
-echo $config['site_name'];
-?></h1>
-<h2>My Account</h2>
+
 
 <?php
 $userID = $_SESSION["userID"];
 $user_data = accounts::findUserbyId($userID);
 ?>
 
-<h1>Hi <?=$user_data->fname?></h1>
+<h3>Welcome <?=$user_data->fname?>,</h3>
 								
+
+<?php
+print utility\htmlTable::genarateTableFromMultiArray($data);
+?>
+
+<br><br>
 <ul>
-<li><a href="index.php?page=tasks&action=all">Todos</a>
+<li><a href="index.php?page=tasks&action=all">Your Tasks</a>
 </li>
 <li>
 <a href="index.php?page=accounts&action=logout">Logout</a>
 </li>
 </ul>
 
-<?php
-print utility\htmlTable::genarateTableFromMultiArray($data);
-?>
 
 <script src="js/scripts.js"></script>
 </body>

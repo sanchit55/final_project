@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Todo Task Management</title>
+    <title>Error Page</title>
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 

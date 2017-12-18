@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Todo Task Management</title>
+    <title>Not Found</title>
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
@@ -14,7 +14,7 @@
 
 <body>
 
-<h1>Page Not Found 404</h1>
+<h1>Error 404</h1>
 
 
 <script src="js/scripts.js"></script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Todo Task Management</title>
+    <title>Edit Account</title>
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
@@ -13,13 +13,9 @@
 </head>
 
 <body>
-<h1>
-<?php
-$config = Manage::config();
-echo $config['site_name'];
-?></h1>
 
-<h2>Edit Account</h2>
+
+<h2>Edit Account Details</h2>
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
     First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
@@ -27,11 +23,11 @@ echo $config['site_name'];
     Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
     Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
     Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
-    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
-    <input type="submit" value="Submit form">
+    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br><br>
+    <input type="submit" value="Submit">
 </form>
 
-<a href="index.php?page=accounts&action=all"><button type="button">Back</button></a>
+<a href="index.php?page=accounts&action=all"><button type="button">Go Back</button></a>
 
 <script src="js/scripts.js"></script>
 </body>
