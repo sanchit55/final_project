@@ -35,12 +35,6 @@
 </li>
 </ul>
 
-<!--<form action="index.php?page=tasks&action=store&id=<?php echo $data->id; ?>" method="post">
-	Title: <input type="text" name="title" id="title" value="<?php echo $data->title; ?>" required><br>
-	Body: <textarea name="body" id="body" required><?php echo $data->body; ?></textarea><br>
-	Is Done: <input type="checkbox" name="isdone" id="isdone" value="1" <?php if($data->isdone == '1'){echo 'checked="checked"';}?>><br>
-	<input type="hidden" name="id" id="id" value="<?php echo $data->id; ?>">
-    <input type="submit" value="Submit form">-->
 </form>
 <a href="index.php?page=tasks&action=all">Back</a>
 <script src="js/scripts.js"></script>
