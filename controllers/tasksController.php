@@ -49,7 +49,7 @@ class tasksController extends http\controller
 		$record->createddate = date('Y-m-d');
 		$record->updateddate = date('Y-m-d');
         $record->save();
-        header("Location: index.php?page=tasks&action=edit&id=".$_REQUEST['id']);
+        header("Location: index.php?page=tasks&action=all");
     }
 
     public static function save() {// to save the data
