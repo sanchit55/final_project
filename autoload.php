@@ -7,7 +7,7 @@ class Manage
         return $data;
     }
     
-    public static function core($class)
+    public static function core($class)//calling all the folders functions
     {
 
         $path = 'core/' . str_replace('\\', '/', $class) . '.php';
