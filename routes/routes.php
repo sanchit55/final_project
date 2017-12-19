@@ -10,7 +10,7 @@ class routes
         $route->page = 'homepage';
         $route->action = 'show';
         
-        $route->controller = 'homepageController';
+        $route->controller = 'homepageController';//routing to the homepage
         $route->method = 'show';
         $routes[] = $route;
         $route = new route();
@@ -27,7 +27,7 @@ class routes
         
         $route->action = 'show';
         $route->page = 'tasks';
-        $route->controller = 'tasksController';
+        $route->controller = 'tasksController';//routing to the task page
         $route->method = 'show';
         
         $routes[] = $route;
