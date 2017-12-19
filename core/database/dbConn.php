@@ -16,7 +16,7 @@ class dbConn
         }
     }
 
-    public static function getConnection()
+    public static function getConnection()// establishing the connection with db
     {
         if (!self::$db) {
             

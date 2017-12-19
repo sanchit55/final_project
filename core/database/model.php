@@ -9,7 +9,7 @@ abstract class model
     public function save()
     {
 
-        if($this->validate() == FALSE) {
+        if($this->validate() == FALSE) {// validating the fields
             echo 'failed validation';
             exit;
         }
@@ -47,7 +47,7 @@ abstract class model
 
 
 
-    private function insert()
+    private function insert()// inserting the details
     {
 
         $modelName = static::$modelName;
@@ -65,7 +65,7 @@ abstract class model
         return TRUE;
     }
 
-    private function update()
+    private function update()//updating the account details function
     {
 
         $modelName = static::$modelName;
