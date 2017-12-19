@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title> My project</title>
+    <title> My project</title> <!--homepage layout setup-->
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 

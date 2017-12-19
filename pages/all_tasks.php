@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Task</title>
+    <title>Task</title>  <!--page where all the task will be displayed-->
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -24,7 +24,7 @@ $user_data = accounts::findUserbyId($userID); ?>
 
 <?php
 if(!empty($data)) {
-	print utility\htmlTable::genarateTableFromMultiArray($data);
+	print utility\htmlTable::genarateTableFromMultiArray($data); // table of all the tasks
 } else {
 	echo 'Data not found';
 }

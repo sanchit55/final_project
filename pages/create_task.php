@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Task creation</title>
+    <title>Task creation</title>   <!-- html page creation where all the task will be created-->
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 

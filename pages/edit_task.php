@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Edit Task</title>
+    <title>Edit Task</title> <!-- html page setup for edit task and with CSS-->
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 

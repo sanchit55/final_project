@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en">   <!--filling the information for the buttons and creating html of the same-->
 <head>
     <meta charset="utf-8">
 
@@ -8,7 +8,7 @@
     <meta name="description" content="Todo Task Management">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css">
 
 
 </head>
@@ -25,7 +25,7 @@ $user_data = accounts::findUserbyId($userID);
 								
 
 <?php
-print utility\htmlTable::genarateTableFromMultiArray($data);
+print utility\htmlTable::genarateTableFromMultiArray($data); // calling the table of users details
 ?>
 
 <br><br>
