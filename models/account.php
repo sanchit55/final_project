@@ -12,14 +12,14 @@ final class account extends \database\model
     public $password;
     protected static $modelName = 'account';
 
-    public static function getTablename()
+    public static function getTablename()// linking the user info with the phpmyadmin accounts table
     {
 
         $tableName = 'accounts';
         return $tableName;
     }
 
-    public static function findTasks()
+    public static function findTasks() // linking the users task with the todos table in phpmyadmin
     {
 
         $records = todos::findAll();
@@ -35,14 +35,14 @@ final class account extends \database\model
 
     }
 
-    public function checkPassword($LoginPassword) {
+    public function checkPassword($LoginPassword) {  //verifying the password
 
         return password_verify($LoginPassword, $this->password);
 
 
     }
 
-    public function validate()
+    public function validate()  // validating the email
     {
         $valid = TRUE;
         echo 'myemail: ' . $this->email;
