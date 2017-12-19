@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 define('DATABASE', 'sg948');
 define('USERNAME', 'sg948');
 define('PASSWORD', 'HfwrZHvX');
-define('CONNECTION', 'sql1.njit.edu');
+define('CONNECTION', 'sql1.njit.edu'); //connecting to the database
 class dbConn
 {
        protected static $db;
