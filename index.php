@@ -1,6 +1,6 @@
 <?php
 
-//turn on debugging messages
+//turn on debugging error messages
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 include_once "autoload.php";
